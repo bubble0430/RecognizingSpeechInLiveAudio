@@ -11,7 +11,7 @@ import Speech
 public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     // MARK: Properties
     
-    private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))!
+    private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "ja-JP"))!
     
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     
@@ -25,6 +25,7 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     
     // MARK: View Controller Lifecycle
     
+    // Viewが読み込まれたとき
     public override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +33,7 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
         recordButton.isEnabled = false
     }
     
+    // Viewが表示されたとき
     override public func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         // Configure the SFSpeechRecognizer object already
